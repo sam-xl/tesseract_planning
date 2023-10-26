@@ -137,6 +137,7 @@ void UpsampleTrajectoryTask::upsample(CompositeInstruction& composite,
       if (start_instruction.isNull())
       {
         start_instruction = i.as<MoveInstructionPoly>();
+        composite.push_back(i);
         continue;
       }
 
